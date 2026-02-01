@@ -1,28 +1,35 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Categories from './components/Categories';
-import DiscountedProducts from './components/DiscountedProducts';
-import Testimonial from './components/Testimonial';
-import Contact from './components/Contact';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import ProductDetails from './pages/ProductDetails';
+import Cart from './pages/Cart';
+import Blog from './pages/Blog';
+import Sale from './pages/Sale';
+import { ShopContextProvider } from './context/ShopContext';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <main className="space-y-24 pb-24">
-        <Hero />
-        <Categories />
-        <DiscountedProducts />
-        <Testimonial />
-        <Contact />
-        <Newsletter />
-        {/* Sections to be added here */}
-      </main>
-      <Footer />
-    </div>
+    <ShopContextProvider>
+      <BrowserRouter>
+        <div className="min-h-screen bg-white">
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/sale" element={<Sale />} />
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ShopContextProvider>
   );
 }
 
