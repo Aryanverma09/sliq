@@ -32,7 +32,7 @@ const Categories = () => {
         {/* Video Card */}
         <div className="md:col-span-1 min-h-[250px] relative rounded-3xl overflow-hidden group cursor-pointer">
            <img 
-             src="https://images.unsplash.com/photo-1556228720-1957be93c6fd?q=80&w=2787&auto=format&fit=crop" 
+             src="https://images.unsplash.com/photo-1700237497170-2d85a2a74087?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
              alt="Beauty Video" 
              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
            />

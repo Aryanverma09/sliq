@@ -24,7 +24,7 @@ const Contact = () => {
            {/* Map Preview */}
            <div className="flex-1 rounded-3xl overflow-hidden h-[300px] md:h-[400px] relative bg-white/50">
              <img 
-               src="https://images.unsplash.com/photo-1577086664693-894553052520?q=80&w=2070&auto=format&fit=crop" 
+               src="https://upload.wikimedia.org/wikipedia/en/5/56/Google_maps_screenshot.png" 
                alt="Map" 
                className="w-full h-full object-cover opacity-60"
              />

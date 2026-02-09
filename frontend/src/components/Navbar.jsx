@@ -1,11 +1,22 @@
-import React, { useContext } from 'react';
+
+import React, { useContext, useState } from 'react';
 import { Search, ShoppingBag, User } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { ShopContext } from '../context/ShopContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
+  const { user } = useContext(AuthContext);
   const totalItems = getTotalCartItems();
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      navigate(`/shop?search=${searchQuery}`);
+    }
+  };
 
   return (
     <nav className="w-full px-4 py-4 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
@@ -41,12 +52,20 @@ const Navbar = () => {
             <input 
               type="text" 
               placeholder="Search" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleSearch}
               className="bg-transparent border-none outline-none text-sm ml-2 w-24 placeholder:text-text-muted"
             />
           </div>
-          <button className="p-2 hover:bg-secondary rounded-full transition-colors">
-            <User className="w-5 h-5 text-primary-dark" />
-          </button>
+          <Link to={user ? "/profile" : "/login"} className="p-2 hover:bg-secondary rounded-full transition-colors relative group">
+            <User className={`w-5 h-5 ${user ? "text-primary-dark" : "text-text-main"}`} />
+            {user && (
+               <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  {user.name}
+               </span>
+            )}
+          </Link>
           <Link to="/cart" className="p-2 hover:bg-secondary rounded-full transition-colors relative">
             <ShoppingBag className="w-5 h-5 text-primary-dark" />
             {totalItems > 0 && (

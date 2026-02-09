@@ -43,7 +43,7 @@ const Footer = () => {
              <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-center gap-2"><Instagram size={16}/> <a href="#" className="hover:text-white transition-colors">Instagram</a></li>
               <li className="flex items-center gap-2"><Send size={16}/> <a href="#" className="hover:text-white transition-colors">Telegram</a></li>
-              <li className="flex items-center gap-2"><Facebook size={16}/> <a href="#" className="hover:text-white transition-colors">Whatsapp</a></li>
+              <li className="flex items-center gap-2"><Facebook size={16}/> <a href="#" className="hover:text-white transition-colors">Facebook</a></li>
             </ul>
           </div>
         </div>

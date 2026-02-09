@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import { Link } from 'react-router';
 
 const Hero = () => {
   return (
@@ -13,9 +14,9 @@ const Hero = () => {
           </h1>
           
           <div className="flex gap-4 mb-8">
-             <button className="flex items-center gap-2 bg-white text-primary-dark px-6 py-3 rounded-full font-medium hover:bg-secondary transition-all transform hover:scale-105 active:scale-95">
+             <Link to="/shop" className="flex items-center gap-2 bg-white text-primary-dark px-6 py-3 rounded-full font-medium hover:bg-secondary transition-all transform hover:scale-105 active:scale-95">
                 Open Store <ArrowRight size={18} />
-             </button>
+             </Link>
              <button className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition-colors">
                 <div className="w-0 h-0 border-t-4 border-t-transparent border-l-8 border-l-white border-b-4 border-b-transparent ml-1"></div>
              </button>
@@ -39,7 +40,7 @@ const Hero = () => {
            {/* Abstract shapes or image placeholder */}
            <div className="absolute inset-0 bg-gradient-to-tr from-primary-dark/20 to-transparent z-10"></div>
            <img 
-             src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=2787&auto=format&fit=crop" 
+             src="https://images.unsplash.com/photo-1714666990471-0b1cb70c0824?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
              alt="Luxury Beauty Product" 
              className="w-full h-full object-cover"
            />

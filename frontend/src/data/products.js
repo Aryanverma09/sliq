@@ -35,7 +35,7 @@ export const products = [
     price: 36,
     oldPrice: 45,
     discount: '20% OFF',
-    image: 'https://images.unsplash.com/photo-1631729371254-42c2a89ddf0d?q=80&w=2080&auto=format&fit=crop',
+    image: 'https://plus.unsplash.com/premium_photo-1679046948946-e88fb27d9bd8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'For Face',
     description: 'High performance active wear foundation. Transfer resistant, water resistant, and sweat resistant.'
   },
@@ -55,7 +55,7 @@ export const products = [
     price: 24,
     oldPrice: 30,
     discount: '20% OFF',
-    image: 'https://images.unsplash.com/photo-1595916300793-f01cb1645d87?q=80&w=1887&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1631214524085-17874764a0e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hdHRlJTIwbGlwc3RpY2t8ZW58MHx8MHx8fDA%3D',
     category: 'For Lips',
     description: 'Creamy matte lipstick that delivers intense color and hydration.'
   },
@@ -75,7 +75,7 @@ export const products = [
     price: 28,
     oldPrice: 35,
     discount: '20% OFF',
-    image: 'https://images.unsplash.com/photo-1556228578-8d8948704250?q=80&w=1887&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1748639320154-6ba118bccc74?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'For Face',
     description: 'Gentle facial cleanser that removes dirt, oil, and makeup without stripping skin.'
   }

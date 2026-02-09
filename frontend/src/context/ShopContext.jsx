@@ -5,7 +5,7 @@ export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {};
-  // Check local storage first (optional persistence)
+  
   const savedCart = localStorage.getItem('sliq-cart');
   if (savedCart) {
     return JSON.parse(savedCart);
